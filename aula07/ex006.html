@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ex006</title>
+</head>
+<style>
+div#area{
+font: normal 15pt Arial;
+background-color: green;
+color: white;
+width: 200px;
+height: 200px;
+line-height: 200px;
+text-align: center;
+}
+</style>
+<body>
+<div id="area">Interajaa...</div>
+
+```
+<script>
+
+    var area = document.getElementById('area')
+
+    area.addEventListener('click', clicou)
+    area.addEventListener('mouseenter', dentro)
+    area.addEventListener('mouseout', fora)
+    area.addEventListener('mousedown',clicando)
+    area.addEventListener('mouseup', soltou)
+
+    function clicou()   {
+      area.innerText = 'Clicou!'
+    }
+
+    function dentro()   {
+      area.innerText = 'Dentro!'
+    }
+
+    function fora()   {
+      area.innerText = 'Fora!'
+    }
+
+    function clicando()   {
+      area.innerText = 'Clicando!'
+      area.style.backgroundColor = 'red'
+    }
+
+    function soltou() {
+        area.style.backgroundColor = 'green'
+    }
+
+</script>
+
+</body>
+</html>
