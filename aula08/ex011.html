@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=l, initial-scale=1.0" />
+    <title>Você é brasilairo?</title>
+  </head>
+  <body>
+    <h1>Digite seu pais!</h1>
+    <label for="txtcountry"></label>
+    <input type="text" name="txtcountry" id="txtcountry" />
+    <input type="button" value="Brasilairo?" onclick="pais()" />
+    
+    <div id="resp"></div>
+    <div id="respoista"></div>
+
+    <script>
+      function pais() {
+
+        var country = document.getElementById('txtcountry').value;
+
+        var resp = document.getElementById('resp')
+
+        var respoista = document.getElementById('respoista')
+
+        resp.innerHTML = `Vivendo em ${country}`
+
+        if (country == "brasil") {
+
+          respoista.innerHTML = `Você é do 
+          ${country} está de parabueins`;
+        } else {
+          respoista.innerHTML = `Você é estransgeiro, não estas de parabueins`;
+        }
+      }
+    </script>
+  </body>
+</html>
